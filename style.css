@@ -31,7 +31,7 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -64,6 +64,11 @@ header {
   color: #fff;
 }
 
+header nav ul {
+  display: flex;
+  justify-content: center;
+}
+
 header nav ul li {
   list-style-type: none;
 }
@@ -81,6 +86,9 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border: 2px solid #ff385c;
   padding: 10px;
 }
@@ -92,7 +100,8 @@ form label {
 form select,
 form input {
   margin-bottom: 20px;
-  width: 180px;
+  width: 65%;
+  float: right;
 }
 
 form button {
@@ -117,3 +126,55 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 1000px) {
+  header {
+    background-color: #ff385c;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header nav {
+    padding: 10px;
+  }
+
+  form {
+    flex-direction: row;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  .vacation-form .item {
+    display: flex block;
+    flex: 1 1 auto;
+    flex-direction: column;
+  }
+
+  .item label
+  , .item input 
+  , .item select 
+  , .item button {
+    display: flex;
+    width: 100%
+  }
+
+  .grid-column {
+    display: flex;
+    flex: 1;
+    flex-direction: column; 
+    margin: 10px;
+  }
+
+  .grid-row {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+  }
+}
