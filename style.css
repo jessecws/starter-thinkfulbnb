@@ -194,3 +194,14 @@ footer p {
     flex-direction: row;
   }
 }
+
+@media all and (max-width: 1000px) {
+  .logo {
+    display: flex;
+    justify-content: center;
+    font-family: "Pangolin", cursive;
+    font-size: 10vw;
+    color: #fff;
+    margin: auto;
+  }
+}
