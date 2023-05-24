@@ -2,6 +2,8 @@
 
 body {
   font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 h2 {
@@ -93,6 +95,11 @@ form {
   padding: 10px;
 }
 
+form div {
+  display: flex;
+  justify-content: space-between;
+}
+
 form label {
   font-weight: bold;
 }
@@ -101,7 +108,6 @@ form select,
 form input {
   margin-bottom: 20px;
   width: 65%;
-  float: right;
 }
 
 form button {
@@ -109,8 +115,9 @@ form button {
   border: none;
   color: #fff;
   font-size: 24px;
-  padding: 15px;
+  padding: 10px;
   width: 100%;
+  align-self: auto;
 }
 
 /* -------  Footer ------- */
@@ -127,7 +134,7 @@ footer p {
 
 /* -------  Media Query ------- */
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 480px) {
   header {
     background-color: #ff385c;
     display: flex;
@@ -155,7 +162,6 @@ footer p {
     display: flex block;
     flex: 1 1 auto;
     flex-direction: column;
-    padding: 0 30px;
   }
 
   .vacation-form .button{
@@ -169,7 +175,7 @@ footer p {
     text-align: center;
     margin: 0.125rem;
     border-radius: 1.1875rem;
-    border: 2px solid #ff385c;
+    border: 1px solid #ff385c;
     background-color: #ff385c;
   }
 
@@ -195,12 +201,12 @@ footer p {
   }
 }
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 480px) {
   .logo {
     display: flex;
     justify-content: center;
     font-family: "Pangolin", cursive;
-    font-size: 10vw;
+    font-size: 48px;
     color: #fff;
     margin: auto;
   }
